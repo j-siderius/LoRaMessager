@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 0,
+        "name" : "This device",
+        "number" : "00000001",
+        "secret" : "ApplePie16"
+    },
+    {
+        "id" : 1,
+        "name" : "user2",
+        "number" : "00000002",
+        "secret" : "Raspberry2"
+    },
+    {
+        "id" : 2,
+        "name" : "user3",
+        "number" : "00000003",
+        "secret" : "Poptart85"
+    },
+    {
+        "id" : 3,
+        "name" : "123",
+        "number" : "00000004",
+        "secret" : "Crispies74"
+    }
+]

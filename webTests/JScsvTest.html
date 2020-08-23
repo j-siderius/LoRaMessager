@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS-CSV test</title>
+    <style>
+        table, th {
+            width: 95%;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th {
+            width: 30%;
+        }
+    </style>
+  </head>
+  <body>
+    <table>
+        <tbody id="messages"></tbody>
+    </table>
+
+    <script>
+      console.log("starting");
+
+      const params = new URLSearchParams(window.location.search);
+      var number = params.get('number');
+      if (!number) {
+          console.log("no number specified");
+      }
+      console.log("number: " + number);
+
+      fetch("MOCK_DATA2.txt")
+        .then(response => response.text())
+        .then(text =>{
+          var lines = text.split("\n");
+          var json = [];
+          var headers = lines[0].split("|");
+
+          for(var i = 1; i < lines.length; i++){
+              var obj = {};
+              var currentline = lines[i].split("|");
+              for(var j = 0; j < headers.length; j++){
+                  obj[headers[j]] = currentline[j];
+              }
+
+              json.push(obj);
+          }
+          console.log(json);
+
+          var filteredjson = json.filter(element=>element.number == number);
+          console.log(filteredjson);
+
+          var tempTable = "<th>" + number + "</th><th>User</th><th>RSSI</th>";
+          filteredjson.forEach(element => {
+            if(element.received == "1"){
+              tempTable += "<tr>";
+              tempTable += "<td></td><td>" + element.message + "</td><td>" + element.rssi + "</td>";
+              tempTable += "</tr>";
+            } else {
+              tempTable += "<tr>";
+              tempTable += "<td>" + element.message + "</td><td></td><td>" + element.rssi + "</td>";
+              tempTable += "</tr>";
+            }
+          });
+          tempTable += "<tr><td colspan='2'><textarea rows='2' cols='120'>Message...</textarea></td><td><button onclick='alert(1);'>Submit</button></td></tr>"
+          document.getElementById("messages").innerHTML = tempTable;
+        });
+    </script>
+  </body>
+</html>

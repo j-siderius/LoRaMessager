@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+</head>
+<body>
+    <h2>Contacts</h2>
+    Name: <span id="name"></span><br>
+    Number: <span id="number"></span><br>
+    <button onclick="showSecrets()" id="button">Show Secret?</button><br>
+    Secret: <span id="secret"></span><br>
+
+    <button onclick="message()" id="link"></button><br>
+
+    <a href="index.html">Back</a>
+
+    <script>
+        // startup, get user id
+        const params = new URLSearchParams(window.location.search);
+        var id = params.get('id');
+        if (!id) {
+            console.log("no ID specified");
+            window.location.href = "index.html";
+        }
+        console.log("id: " + id);
+        var messagelink = "";
+
+        //get contact info
+        fetch("contacts.json").then(
+            res=>{
+                res.json().then(
+                    data=>{
+                        var filtered = data.filter(element=>element.id == id);
+                        document.getElementById("name").innerHTML = filtered[0].name;
+                        document.getElementById("number").innerHTML = filtered[0].number;
+                        document.getElementById("secret").innerHTML = filtered[0].secret;
+                        document.getElementById("secret").style.display = "none";
+                        messagelink = "messages.html?id=" + filtered[0].name;
+                        document.getElementById("link").innerHTML = "Contact " + filtered[0].name;
+                        if (filtered[0].name == "This device"){
+                            document.getElementById("link").style.display = "none";
+                            document.getElementById("button").style.display = "none";
+                            document.getElementById("secret").style.display = "none";
+                        }
+                    }
+                )
+            }
+        ).catch(function() {
+            console.log("could not find contacts JSON");
+        });
+
+    var show = false;
+    function showSecrets(){
+        if(show) {
+            document.getElementById('secret').style.display = "none";
+            document.getElementById('button').innerHTML = "Show Secrets?";
+            show = false;
+        } else {
+            document.getElementById('secret').style.display = "block";
+            document.getElementById('button').innerHTML = "Hide Secrets";
+            show = true;
+        }
+    }
+
+    function message(){
+        window.location.href = messagelink;
+    }
+    </script>
+</body>
+</html>

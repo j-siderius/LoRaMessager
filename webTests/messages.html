@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <style>
+        table, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th {
+            width: 45%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Messages</h2>
+
+    <table>
+        <tbody id="table"></tbody>
+    </table>
+
+    <h3>Type your message:</h3>
+    <form action="/m" method="get">
+        <input type="hidden" name="number" id="idParam">
+        <textarea name=message maxlength="140" rows="6" onkeyup="charcountupdate(this.value)"
+        onclick="this.innerHTML = ''" required>Message...</textarea><br>
+        <span id=charcount>0 out of 140 characters</span><br>
+        <input type="submit" value="Submit" onclick="sendMessage()">
+    </form>
+    <br>
+    <a href="index.html">Back</a>
+
+    <script>
+        // startup, build page with messages
+        const params = new URLSearchParams(window.location.search);
+        var id = params.get('id');
+        if (!id) {
+            console.log("no ID specified");
+            window.location.href = "index.html";
+        }
+        console.log("id: " + id);
+ 
+        //read messages
+        var file = id + ".json";
+        fetch(file).then(
+            res=>{
+                res.json().then(
+                    data=>{
+                        console.log(data);
+
+                        var tempTable = "<th>" + id + "</th><th>User</th>";
+                        data.forEach(element => {
+                            if (!element.user){
+                                tempTable += "<tr>";
+                                tempTable += "<td>No Messages</td><td></td>";
+                                tempTable += "</tr>";
+                                console.log("No messages to show");
+                            } else if(element.user == id){
+                                tempTable += "<tr>";
+                                tempTable += "<td>" + element.content + "</td><td></td>";
+                                tempTable += "</tr>";
+                            } else {
+                                tempTable += "<tr>";
+                                tempTable += "<td></td><td>" + element.content + "</td>";
+                                tempTable += "</tr>";
+                            }
+                        });
+                        document.getElementById("table").innerHTML = tempTable;
+                    }
+                )
+            }
+        ).catch(function() {
+        console.log("could not find specified ID");
+            window.location.href = "index.html";
+    });
+
+    //get phone number
+    fetch("contacts.json").then(
+            res=>{
+                res.json().then(
+                    data=>{
+                        var filtered = data.filter(element=>element.name == id);
+                        console.log(filtered);
+                        document.getElementById("idParam").value = filtered[0].number;
+                    }
+                )
+            }
+        ).catch(function() {
+            console.log("could not find contacts JSON");
+        });   
+
+    function charcountupdate(str) {
+            var lng = str.length;
+            document.getElementById("charcount").innerHTML =
+                lng + " out of 140 characters";
+        }
+
+        function sendMessage() {
+            document.getElementById("charcount").innerHTML = "0 out of 140 characters";
+            document.getElementsByName('message').value = "Message...";
+          }
+    </script>
+</body>
+</html>

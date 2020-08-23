@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact</title>
+</head>
+<body>
+    <h2>Add new contact</h2>
+
+    <!-- should change method to POST for sensitive data -->
+    <form action="/u" method="GET">
+        Name: <input type="text" name="name" required maxlength="16"><br>
+        Number: <input type="number" name="number" required minlength="8" maxlength="8"><br>
+        Shared Secret: <input type="text" name="secret" required minlength="12" maxlength="12"><br>
+        <input type="submit" value="Submit" onclick="addUser()">
+    </form>
+    <p>Explanation:<br>Name your contact (max 16 characters)
+        <br>Then add their unique number (8 numbers)
+        <br>Come up with a secret eg. PopTarts2431 (12 characters)</p>
+    <br>
+    <a href="index.html">Back</a>
+
+    <script>
+        function addUser(){
+            var name = document.getElementById("name").value = "";
+            var number = document.getElementById("number").value = "";
+            var secret = document.getElementById("secret").value = "";
+        }
+    </script>
+</body>
+</html>

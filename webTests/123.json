@@ -1,0 +1,38 @@
+[
+    {
+        "id" : "1",
+        "user" : "123",
+        "time" : 140000,
+        "content" : "First message"
+    },
+    {
+        "id" : "2",
+        "user" : "user2",
+        "time" : 140200,
+        "content" : "Second message"
+    },
+    {
+        "id" : "3",
+        "user" : "123",
+        "time" : 140330,
+        "content" : "test123"
+    },
+    {
+        "id" : "4",
+        "user" : "123",
+        "time" : 140430,
+        "content" : "Long message test, does this also work ???"
+    },
+    {
+        "id" : "4",
+        "user" : "user2",
+        "time" : 140330,
+        "content" : "hello hello?"
+    },
+    {
+        "id" : "5",
+        "user" : "123",
+        "time" : 140430,
+        "content" : "more messages, yeeeeeh\n This is awesome!"
+    }
+]

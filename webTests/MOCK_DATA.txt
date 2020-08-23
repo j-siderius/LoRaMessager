@@ -1,0 +1,100 @@
+id|number|message|rssi|received
+1|00000001|Nulla facilisi.|79.1|1
+2|00000002|Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.|41.5|1
+3|3036872|Donec ut dolor.|76.0|1
+4|00000002|Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.|73.5|1
+5|7479097|Morbi vel lectus in quam fringilla rhoncus.|11.0|1
+6|00000002|In est risus, auctor sed, tristique in, tempus sit amet, sem.|46.8|1
+7|00000001|In hac habitasse platea dictumst.|24.5|1
+8|00000002|In sagittis dui vel nisl.|57.3|0
+9|7662348|Donec semper sapien a libero.|58.3|0
+10|00000002|In hac habitasse platea dictumst.|66.5|0
+11|5807127|Praesent blandit.|31.7|0
+12|4565942|Aliquam sit amet diam in magna bibendum imperdiet.|60.8|1
+13|00000001|Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.|86.8|0
+14|5677741|Suspendisse potenti.|10.5|0
+15|00000002|Etiam vel augue.|81.9|0
+16|9895823|Maecenas ut massa quis augue luctus tincidunt.|31.3|0
+17|00000002|Aenean auctor gravida sem.|75.5|0
+18|00000001|Proin risus.|96.5|0
+19|8811571|Nunc rhoncus dui vel sem.|20.0|1
+20|2761290|Nulla tellus.|48.5|1
+21|8319220|Maecenas pulvinar lobortis est.|94.8|0
+22|00000002|Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.|18.9|1
+23|6509822|Proin interdum mauris non ligula pellentesque ultrices.|84.6|0
+24|9476589|Donec posuere metus vitae ipsum.|42.3|0
+25|4912291|Vestibulum ac est lacinia nisi venenatis tristique.|64.9|0
+26|6821869|Pellentesque eget nunc.|90.4|0
+27|1582900|Vestibulum rutrum rutrum neque.|95.6|1
+28|2787643|Donec dapibus.|76.9|1
+29|00000001|Pellentesque ultrices mattis odio.|58.2|1
+30|7659704|Duis mattis egestas metus.|91.0|0
+31|6087397|Donec dapibus.|52.2|0
+32|00000002|Vestibulum rutrum rutrum neque.|44.4|0
+33|7415939|Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.|95.2|0
+34|8050263|Nulla tempus.|91.1|0
+35|5856434|Vestibulum rutrum rutrum neque.|53.0|1
+36|00000002|In hac habitasse platea dictumst.|90.6|0
+37|5374431|Integer non velit.|42.9|1
+38|7032071|Donec posuere metus vitae ipsum.|89.6|1
+39|7085608|Integer ac neque.|50.6|0
+40|4210554|Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.|55.7|1
+41|3623009|Duis aliquam convallis nunc.|51.5|0
+42|00000002|Nulla ac enim.|72.8|1
+43|6620458|Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.|50.1|0
+44|1865636|In sagittis dui vel nisl.|39.1|1
+45|5543916|Aliquam erat volutpat.|59.3|1
+46|00000002|Suspendisse ornare consequat lectus.|99.3|0
+47|3924554|Morbi a ipsum.|18.7|1
+48|4521897|Nulla justo.|66.3|0
+49|3830115|Cras in purus eu magna vulputate luctus.|27.5|0
+50|3798954|Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.|67.8|1
+51|00000001|Quisque ut erat.|50.2|0
+52|3931487|Integer a nibh.|62.6|0
+53|4492450|Nullam varius.|35.8|1
+54|00000001|Pellentesque at nulla.|65.6|1
+55|4051122|Nam tristique tortor eu pede.|40.3|1
+56|5706817|Cras in purus eu magna vulputate luctus.|45.1|1
+57|5398987|Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.|76.4|1
+58|00000002|Donec posuere metus vitae ipsum.|25.5|1
+59|7907874|Mauris lacinia sapien quis libero.|26.2|1
+60|00000002|Integer ac neque.|51.9|1
+61|8693148|Vivamus tortor.|49.7|1
+62|8669312|Nulla tempus.|53.9|1
+63|00000002|Pellentesque viverra pede ac diam.|18.8|0
+64|3769574|Nullam varius.|82.9|0
+65|4737609|Phasellus sit amet erat.|95.9|0
+66|4483921|Nam tristique tortor eu pede.|41.4|1
+67|4601416|In hac habitasse platea dictumst.|89.8|0
+68|9004644|Quisque id justo sit amet sapien dignissim vestibulum.|29.4|0
+69|3517808|Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.|17.6|1
+70|3799244|Sed accumsan felis.|32.5|0
+71|5926491|Donec ut mauris eget massa tempor convallis.|42.2|0
+72|7937226|Curabitur convallis.|89.3|0
+73|00000001|Lorem ipsum dolor sit amet, consectetuer adipiscing elit.|10.1|0
+74|00000001|Nulla suscipit ligula in lacus.|48.5|0
+75|3858346|Nulla justo.|13.2|1
+76|1546591|Proin leo odio, porttitor id, consequat in, consequat ut, nulla.|72.9|0
+77|5910615|Cras non velit nec nisi vulputate nonummy.|37.0|0
+78|6208134|Vivamus tortor.|15.2|0
+79|6071134|Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.|52.6|0
+80|00000001|Nulla facilisi.|31.3|0
+81|4546855|Phasellus in felis.|78.6|1
+82|6300308|Praesent blandit lacinia erat.|87.3|0
+83|5730776|Praesent blandit lacinia erat.|33.3|1
+84|6719599|Curabitur gravida nisi at nibh.|62.2|1
+85|7513647|Donec vitae nisi.|35.3|0
+86|6748255|Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.|35.6|1
+87|4188490|Proin leo odio, porttitor id, consequat in, consequat ut, nulla.|96.5|0
+88|7639884|Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio.|82.4|0
+89|4072762|Fusce consequat.|40.5|0
+90|1988979|Integer a nibh.|82.1|0
+91|2046843|In quis justo.|56.9|1
+92|00000001|Vivamus vestibulum sagittis sapien.|65.0|1
+93|00000001|Nam nulla.|43.4|1
+94|6465450|Praesent lectus.|72.0|1
+95|7963894|Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.|52.7|0
+96|00000001|Suspendisse ornare consequat lectus.|38.5|1
+97|8768288|Vivamus vestibulum sagittis sapien.|28.6|1
+98|5529228|In congue.|16.4|0
+99|9132131|Donec ut mauris eget massa tempor convallis.|61.7|0

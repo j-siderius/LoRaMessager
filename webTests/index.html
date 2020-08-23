@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h2>Home</h2>
+
+    <h3>Status: <span id="status"></span></h3>
+
+    <h3>Contacts:</h3>
+    <table>
+        <tbody id="table"></tbody>
+    </table>
+
+    <button onclick="newContact()">Add new user</button>
+
+    <script>
+        // fill out contacts
+        fetch("contacts.json").then(
+            res=>{
+                res.json().then(
+                    data=>{
+                        console.log(data);
+
+                        var tempTable = "";
+                        data.forEach(element => {
+                            var link = "contacts.html?id=" + element.id;
+                            tempTable += "<tr>";
+                            tempTable += "<td><a href=" + link + ">" + element.name + "</a></td>";
+                            tempTable += "</tr>";
+                        });
+                        document.getElementById("table").innerHTML = tempTable;
+                    }
+                )
+            }
+        ).catch(function() {
+        console.log("could not find contacts JSON");
+    });
+
+    function newContact(){
+        window.location.href = "newContact.html";
+
+    }
+    </script>
+</body>
+</html>
