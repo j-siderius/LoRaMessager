@@ -11,7 +11,7 @@ This project started when the need for intercommunication during walks in areas 
 * Long battery-life, must last at least 24h if not more.
 * All messages and settings stored on the device, even after power-down.
 * User should not have to download any specific app, and interface should work in any modern browser.
-* <essage encryption should be applied to make sure only intended recipient can read message. This can be implemented with for example private-keys.
+* Message encryption should be applied to make sure only intended recipient can read message. This can be implemented with for example private-keys.
 * Messages should be error-checked and there should be a received feedback-mechanism implemented.
 
 ### Stretch goals
