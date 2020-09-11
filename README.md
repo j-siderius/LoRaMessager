@@ -6,6 +6,11 @@ LoRa based, off-network private messaging.
 ## Overview
 This project started when the need for intercommunication during walks in areas with limited to no network coverage was determined. The resulting product will likely be a ESP32/LoRa baseboard combined with a LiPo battery inside of a 3D printed shell.
 
+## Existing solutions
+* GoTenna (https://gotenna.com/) makes off grid communications nodes. One of the main downsides of the product is the fact that it is quite expensive and needs an app to function. This may have the unwanted side-effect of storing, analyzing or sending (personal)data to third-parties.
+* GoToky (https://www.gotoky.com/) is a similar LoRa-based mesh communicator, however it is still in the development phase and only available as pre-order on IndieGoGo.
+* BearTooth (https://beartooth.com/) claims to be the worlds smartest walkie-talkie. This entails that the device is mainly used for PTT (Push-To-Talk) functionality and voice-communication. 
+
 ## Requirements
 * Portable design, must not weight >500g all incl.
 * Long battery-life, must last at least 24h if not more.
